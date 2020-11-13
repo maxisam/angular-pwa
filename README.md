@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Create Fake Certificate 
+ 
+ ```
+ openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem
+ ```
+
+## By-pass Chrome security
+
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --profile-directory="Profile 1" --remote-debugging-port=9222 --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure=https://localhost:4200

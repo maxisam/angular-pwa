@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --prod --ssl true",
+    "start:pwa": "http-server ./dist/ng-v11 -p 4200 -S -C ./fake-crt/cert.pem -K ./fake-crt/key.pem -o",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -39,6 +40,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "~7.0.0",
+    "http-server": "0.12.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
